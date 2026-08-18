@@ -35,13 +35,11 @@
   .font-display{font-family:'Anton',sans-serif;letter-spacing:0.01em}
   .font-cond{font-family:'Oswald',sans-serif}
   
-  /* Beer texture overlay */
   .beer-noise{
     position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0.08;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
   
-  /* Bubbles */
   .bubbles{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden}
   .bubble{
     position:absolute;bottom:-40px;border-radius:50%;
@@ -56,22 +54,6 @@
     100%{transform:translateY(-110vh) translateX(40px) scale(1);opacity:0}
   }
   
-  /* Foam wave at top of sections */
-  .foam-wave{
-    position:relative;height:60px;width:100%;
-    background:
-      radial-gradient(circle at 10% 50%, rgba(247,233,200,0.95) 8px, transparent 9px),
-      radial-gradient(circle at 25% 30%, rgba(247,233,200,0.95) 10px, transparent 11px),
-      radial-gradient(circle at 40% 60%, rgba(247,233,200,0.95) 9px, transparent 10px),
-      radial-gradient(circle at 55% 40%, rgba(247,233,200,0.95) 11px, transparent 12px),
-      radial-gradient(circle at 70% 55%, rgba(247,233,200,0.95) 8px, transparent 9px),
-      radial-gradient(circle at 85% 35%, rgba(247,233,200,0.95) 10px, transparent 11px),
-      radial-gradient(circle at 95% 60%, rgba(247,233,200,0.95) 9px, transparent 10px);
-    background-size: 100% 100%;
-    filter: blur(0.3px);
-  }
-  
-  /* Hero title with beer fill */
   .beer-text{
     background: linear-gradient(180deg,
       #fff7e0 0%,
@@ -86,7 +68,6 @@
     filter: drop-shadow(0 4px 18px rgba(255,182,39,0.25));
   }
   
-  /* Glass card */
   .glass-card{
     background: linear-gradient(135deg, rgba(40,22,10,0.7) 0%, rgba(20,10,4,0.6) 100%);
     border:1px solid var(--line);
@@ -109,7 +90,6 @@
   }
   .glass-card:hover::before{opacity:1}
   
-  /* Countdown */
   .count-box{
     background: linear-gradient(180deg, rgba(15,8,4,0.95) 0%, rgba(40,22,10,0.6) 100%);
     border:1px solid rgba(255,182,39,0.25);
@@ -124,25 +104,6 @@
     pointer-events:none;
   }
   
-  /* Beer glass illustration */
-  .glass-fill{
-    animation: fill 3s ease-in-out infinite alternate;
-    transform-origin: bottom;
-  }
-  @keyframes fill{
-    0%{transform:scaleY(0.92)}
-    100%{transform:scaleY(1)}
-  }
-  
-  .liquid-shine{
-    animation: shine 4s ease-in-out infinite;
-  }
-  @keyframes shine{
-    0%,100%{opacity:0.3;transform:translateX(-10px)}
-    50%{opacity:0.7;transform:translateX(10px)}
-  }
-  
-  /* Buttons */
   .btn-primary{
     background: linear-gradient(135deg, #ffb627 0%, #e8a838 50%, #c97f1e 100%);
     color:#1a0a02;
@@ -169,13 +130,6 @@
   }
   .btn-whatsapp:hover{transform:translateY(-2px);box-shadow: 0 14px 40px -8px rgba(37,211,102,0.7)}
   
-  /* Section dividers */
-  .grain-divider{
-    height:1px;
-    background:linear-gradient(90deg, transparent, rgba(255,182,39,0.4), transparent);
-  }
-  
-  /* Tag */
   .tag{
     display:inline-flex;align-items:center;gap:6px;
     padding:6px 14px;border-radius:999px;
@@ -192,18 +146,15 @@
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
   
-  /* Price */
   .price-old{
     text-decoration: line-through;
     text-decoration-color: rgba(255,107,107,0.7);
     color: rgba(247,233,200,0.5);
   }
   
-  /* Reveal */
   .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(.2,.8,.2,1)}
   .reveal.in{opacity:1;transform:translateY(0)}
   
-  /* Sticky WA */
   .wa-float{
     position:fixed;bottom:24px;right:24px;z-index:50;
     width:60px;height:60px;border-radius:50%;
@@ -217,32 +168,59 @@
     50%{box-shadow:0 10px 30px rgba(37,211,102,0.5), 0 0 0 16px rgba(37,211,102,0)}
   }
   
-  /* Marquee */
   .marquee{display:flex;gap:60px;animation:scroll 30s linear infinite;white-space:nowrap}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   
-  /* Beer liquid pour animation */
-  .pour{
-    animation: pour 6s ease-in-out infinite;
-  }
-  @keyframes pour{
-    0%,100%{transform:translateY(0) rotate(0)}
-    50%{transform:translateY(-4px) rotate(-2deg)}
-  }
-  
   .glow-text{text-shadow: 0 0 30px rgba(255,182,39,0.5)}
   
-  @media (max-width:640px){
-    .module-num{font-size:60px}
-  }
-  
-  /* Copy feedback */
-  .copied{
-    animation: copiedFlash 1s ease;
-  }
+  .copied{animation: copiedFlash 1s ease}
   @keyframes copiedFlash{
     0%{background:rgba(37,211,102,0.3)}
     100%{background:transparent}
+  }
+  
+  /* Poster image styling */
+  .poster-frame{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow: 
+      0 30px 80px -20px rgba(0,0,0,0.7),
+      0 0 0 1px rgba(255,182,39,0.2),
+      0 0 60px -10px rgba(255,182,39,0.3);
+    transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
+  }
+  .poster-frame:hover{
+    transform: translateY(-6px) scale(1.01);
+  }
+  .poster-frame::after{
+    content:"";position:absolute;inset:0;border-radius:20px;
+    background: linear-gradient(135deg, rgba(255,182,39,0.1) 0%, transparent 30%, transparent 70%, rgba(255,182,39,0.1) 100%);
+    pointer-events:none;
+  }
+  .poster-img{
+    width:100%;height:auto;display:block;
+  }
+  .poster-glow{
+    position:absolute;inset:-40px;border-radius:30px;
+    background: radial-gradient(circle, rgba(255,182,39,0.25) 0%, transparent 70%);
+    z-index:-1;
+    filter: blur(40px);
+  }
+  
+  .floating-badge{
+    position:absolute;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-8px)}
+  }
+  
+  @media (max-width:640px){
+    .module-num{font-size:60px}
   }
 </style>
 </head>
@@ -301,7 +279,6 @@
         </a>
       </div>
       
-      <!-- Trust row -->
       <div class="mt-10 grid grid-cols-3 gap-4 max-w-lg">
         <div>
           <div class="font-display text-3xl text-amber-300">6</div>
@@ -318,86 +295,28 @@
       </div>
     </div>
     
-    <!-- Beer Glass Visual -->
+    <!-- Poster image -->
     <div class="lg:col-span-5 relative reveal">
-      <div class="relative aspect-square max-w-md mx-auto">
-        <!-- Glow -->
-        <div class="absolute inset-0 rounded-full bg-amber-500/20 blur-3xl"></div>
-        
-        <!-- Beer Glass SVG -->
-        <svg viewBox="0 0 300 400" class="relative pour" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="beerLiquid" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#ffb627"/>
-              <stop offset="40%" stop-color="#e8a838"/>
-              <stop offset="80%" stop-color="#c97f1e"/>
-              <stop offset="100%" stop-color="#8a4810"/>
-            </linearGradient>
-            <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="rgba(255,255,255,0.1)"/>
-              <stop offset="50%" stop-color="rgba(255,255,255,0.25)"/>
-              <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
-            </linearGradient>
-            <radialGradient id="foamGrad">
-              <stop offset="0%" stop-color="#fff7e0"/>
-              <stop offset="60%" stop-color="#f7e9c8"/>
-              <stop offset="100%" stop-color="#d4b87a"/>
-            </radialGradient>
-          </defs>
-          
-          <!-- Glass body -->
-          <path d="M 80 80 L 220 80 L 210 360 L 90 360 Z" fill="url(#glassGrad)" stroke="rgba(255,232,180,0.3)" stroke-width="2"/>
-          
-          <!-- Liquid -->
-          <g class="glass-fill">
-            <path d="M 87 130 L 213 130 L 207 355 L 93 355 Z" fill="url(#beerLiquid)" opacity="0.95"/>
-            <!-- Shine -->
-            <rect x="100" y="135" width="8" height="210" fill="rgba(255,255,255,0.3)" class="liquid-shine"/>
-            <rect x="195" y="145" width="4" height="190" fill="rgba(255,255,255,0.2)"/>
-          </g>
-          
-          <!-- Foam -->
-          <ellipse cx="150" cy="130" rx="65" ry="22" fill="url(#foamGrad)"/>
-          <circle cx="120" cy="118" r="18" fill="url(#foamGrad)"/>
-          <circle cx="145" cy="110" r="22" fill="url(#foamGrad)"/>
-          <circle cx="175" cy="115" r="20" fill="url(#foamGrad)"/>
-          <circle cx="195" cy="125" r="14" fill="url(#foamGrad)"/>
-          <circle cx="105" cy="128" r="12" fill="url(#foamGrad)"/>
-          
-          <!-- Bubbles inside -->
-          <circle cx="130" cy="200" r="3" fill="rgba(255,247,224,0.6)">
-            <animate attributeName="cy" from="340" to="160" dur="3s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="170" cy="250" r="2.5" fill="rgba(255,247,224,0.6)">
-            <animate attributeName="cy" from="350" to="160" dur="4s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0;0.8;0" dur="4s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="150" cy="300" r="2" fill="rgba(255,247,224,0.6)">
-            <animate attributeName="cy" from="350" to="160" dur="3.5s" begin="1s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0;0.8;0" dur="3.5s" begin="1s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="180" cy="280" r="3.5" fill="rgba(255,247,224,0.6)">
-            <animate attributeName="cy" from="345" to="160" dur="4.5s" begin="0.5s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0;0.8;0" dur="4.5s" begin="0.5s" repeatCount="indefinite"/>
-          </circle>
-          
-          <!-- Handle -->
-          <path d="M 220 120 Q 270 140 270 220 Q 270 300 220 320" fill="none" stroke="rgba(255,232,180,0.3)" stroke-width="6"/>
-          <path d="M 220 130 Q 260 150 260 220 Q 260 290 220 310" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-          
-          <!-- Base -->
-          <ellipse cx="150" cy="365" rx="65" ry="8" fill="rgba(0,0,0,0.4)"/>
-        </svg>
+      <div class="relative max-w-md mx-auto">
+        <div class="poster-glow"></div>
+        <div class="poster-frame">
+          <img src="https://z-cdn-media.chatglm.cn/files/2d5f202e-fef2-4b4c-a09e-d5632498fc77.png?auth_key=1887095944-5cf05d62fab44e70ad04af8608fe01fb-0-3bad3e51a8141d3681586555842adf2a" alt="Cartel del curso FORMULADOR CERVECERO - 6 módulos de especialización" class="poster-img" />
+        </div>
         
         <!-- Floating badges -->
-        <div class="absolute top-4 -left-4 glass-card px-4 py-3 hidden sm:block" style="backdrop-filter:blur(10px)">
+        <div class="floating-badge top-4 -left-4 glass-card px-4 py-3 hidden sm:block" style="animation-delay:0s">
           <div class="text-xs text-amber-200/60 uppercase tracking-wider">IBU Calculator</div>
           <div class="font-display text-2xl text-amber-300">INCLUIDO</div>
         </div>
-        <div class="absolute bottom-12 -right-4 glass-card px-4 py-3 hidden sm:block" style="backdrop-filter:blur(10px)">
+        <div class="floating-badge bottom-12 -right-4 glass-card px-4 py-3 hidden sm:block" style="animation-delay:1.5s">
           <div class="text-xs text-amber-200/60 uppercase tracking-wider">Plantillas</div>
           <div class="font-display text-2xl text-amber-300">+12</div>
+        </div>
+        <div class="floating-badge -bottom-4 left-1/2 -translate-x-1/2 glass-card px-5 py-3" style="animation-delay:0.75s">
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-amber-200/60 uppercase tracking-wider">Precio hoy</span>
+            <span class="font-display text-2xl text-amber-300">$999</span>
+          </div>
         </div>
       </div>
     </div>
@@ -461,6 +380,84 @@
   </div>
 </section>
 
+<!-- POSTER SHOWCASE -->
+<section class="relative z-10 px-6 py-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="reveal order-2 lg:order-1">
+        <div class="tag mb-4">El programa completo</div>
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl beer-text mb-6 leading-tight">
+          TODO LO QUE INCLUYE<br/>EL CURSO
+        </h2>
+        <p class="text-amber-100/70 mb-8 text-lg leading-relaxed">
+          El programa <strong class="text-amber-200">FORMULADOR CERVECERO</strong> reúne 6 cursos especializados en un solo pack. Cada módulo está diseñado para llevarte de cero a maestro cervecero, con material descargable, calculadoras y plantillas profesionales.
+        </p>
+        
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ffb627" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-amber-100">Formulación de Cerveza desde Cero</h4>
+              <p class="text-amber-200/50 text-sm">Los 4 pilares: agua, malta, lúpulo, levadura.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ffb627" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-amber-100">Diseño de Cerveza IPA & NEIPA</h4>
+              <p class="text-amber-200/50 text-sm">Dry hopping, haze estable, aromas tropicales.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ffb627" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-amber-100">Lagers & Pilsners · Stouts & Porters</h4>
+              <p class="text-amber-200/50 text-sm">Estilos clásicos y oscuros dominados.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#ffb627" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-amber-100">Cervezas de Frutas y Control de Calidad</h4>
+              <p class="text-amber-200/50 text-sm">Adjuntos, escalado y reproducibilidad.</p>
+            </div>
+          </li>
+        </ul>
+        
+        <a href="#pago" class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 text-base">
+          Quiero inscribirme
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      
+      <div class="reveal order-1 lg:order-2">
+        <div class="relative max-w-md mx-auto lg:ml-auto">
+          <div class="poster-glow"></div>
+          <div class="poster-frame">
+            <img src="https://z-cdn-media.chatglm.cn/files/2d5f202e-fef2-4b4c-a09e-d5632498fc77.png?auth_key=1887095944-5cf05d62fab44e70ad04af8608fe01fb-0-3bad3e51a8141d3681586555842adf2a" alt="Cartel completo del curso FORMULADOR CERVECERO con los 6 módulos" class="poster-img" />
+          </div>
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 floating-badge glass-card px-5 py-3">
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-amber-200/60 uppercase tracking-wider">Ahorra</span>
+              <span class="font-display text-2xl text-amber-300">67%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
 <!-- MODULES -->
 <section id="modulos" class="relative z-10 px-6 py-20">
   <div class="max-w-7xl mx-auto">
@@ -473,7 +470,6 @@
     </div>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- Module 1 -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-start justify-between mb-4">
           <span class="module-num">01</span>
@@ -483,7 +479,6 @@
         <p class="text-amber-200/60 text-sm leading-relaxed">Aprende los 4 pilares: agua, malta, lúpulo y levadura. Crea tu primera receta balanceada entendiendo cada variable.</p>
       </div>
       
-      <!-- Module 2 -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-start justify-between mb-4">
           <span class="module-num">02</span>
@@ -493,7 +488,6 @@
         <p class="text-amber-200/60 text-sm leading-relaxed">Domina el dry hopping, biotransformación, haze estable y aroma tropical. Crea IPAs que compiten a nivel internacional.</p>
       </div>
       
-      <!-- Module 3 -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-start justify-between mb-4">
           <span class="module-num">03</span>
@@ -503,7 +497,6 @@
         <p class="text-amber-200/60 text-sm leading-relaxed">El arte de la limpieza. Decocción, control de fermentación fría, lagering y la elegancia de un estilo que no perdona errores.</p>
       </div>
       
-      <!-- Module 4 -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-start justify-between mb-4">
           <span class="module-num">04</span>
@@ -513,7 +506,6 @@
         <p class="text-amber-200/60 text-sm leading-relaxed">Cuerpo, crema y carácter. Trabajo con maltas oscuras, adjuntos café/chocolate, y diseño de mouthfeel perfecto.</p>
       </div>
       
-      <!-- Module 5 -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-start justify-between mb-4">
           <span class="module-num">05</span>
@@ -523,7 +515,6 @@
         <p class="text-amber-200/60 text-sm leading-relaxed">Diseña cervezas con personalidad. Frutas, especias, café, cacao. Integración aromática y balance sensorial.</p>
       </div>
       
-      <!-- Module 6 -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-start justify-between mb-4">
           <span class="module-num">06</span>
@@ -650,7 +641,6 @@
     </div>
     
     <div class="grid md:grid-cols-3 gap-5 mb-12">
-      <!-- Card deposit -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-center gap-3 mb-5">
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
@@ -673,7 +663,6 @@
         <p class="text-amber-200/50 text-xs">Depósito en OXXO, banco o app móvil a la tarjeta.</p>
       </div>
       
-      <!-- CLABE -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-center gap-3 mb-5">
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400 to-blue-700 flex items-center justify-center">
@@ -706,7 +695,6 @@
         <p class="text-amber-200/50 text-xs">Transferencia desde cualquier banco en México.</p>
       </div>
       
-      <!-- PayPal -->
       <div class="glass-card p-7 reveal">
         <div class="flex items-center gap-3 mb-5">
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center">
@@ -725,7 +713,6 @@
       </div>
     </div>
     
-    <!-- After payment -->
     <div class="glass-card p-7 sm:p-10 reveal relative overflow-hidden">
       <div class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-emerald-500/10 blur-3xl"></div>
       <div class="relative grid md:grid-cols-5 gap-8 items-center">
@@ -805,7 +792,6 @@
 </a>
 
 <script>
-  // Countdown timer - ends August 18, 2026 at 11:00 PM
   const target = new Date('2026-08-18T23:00:00').getTime();
   
   function updateCountdown(){
@@ -833,7 +819,6 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
   
-  // Bubbles
   (function makeBubbles(){
     const container = document.getElementById('bubbles');
     const count = 30;
@@ -850,7 +835,6 @@
     }
   })();
   
-  // Reveal on scroll
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
       if (e.isIntersecting){
@@ -861,7 +845,6 @@
   }, {threshold: 0.12});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   
-  // Copy to clipboard
   function copyText(text, btn){
     navigator.clipboard.writeText(text).then(()=>{
       const original = btn.innerHTML;
