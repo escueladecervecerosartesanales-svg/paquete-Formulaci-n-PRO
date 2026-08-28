@@ -219,6 +219,16 @@
     50%{transform:translateY(-8px)}
   }
   
+  /* Tarjeta del curso secreto */
+  .secret-card{
+    background: linear-gradient(135deg, rgba(72,34,9,0.92) 0%, rgba(24,12,5,0.96) 55%, rgba(52,26,10,0.92) 100%);
+    border:1px solid rgba(255,182,39,0.45);
+    border-radius:18px;
+    box-shadow: 0 24px 60px -20px rgba(255,182,39,0.35), inset 0 0 0 1px rgba(255,182,39,0.06);
+    position:relative;
+    overflow:hidden;
+  }
+  
   @media (max-width:640px){
     .module-num{font-size:60px}
   }
@@ -249,7 +259,7 @@
     <div class="lg:col-span-7 reveal">
       <div class="tag mb-6">
         <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-        Curso especializado · 6 módulos
+        Curso especializado · 6 módulos + 1 secreto
       </div>
       
       <h1 class="font-display text-6xl sm:text-7xl lg:text-8xl xl:text-9xl leading-[0.88] mb-6">
@@ -261,12 +271,16 @@
         Domina el arte y la ciencia de formular cerveza profesional. De la malta al primer sorbo: aprende a diseñar recetas ganadoras, calcular IBU, OG, FG, attenuation y dominar estilos como maestro cervecero.
       </p>
       
-      <div class="flex flex-wrap items-center gap-4 mb-10">
+      <div class="flex flex-wrap items-center gap-4 mb-5">
         <div class="flex items-baseline gap-3">
           <span class="font-display text-5xl sm:text-6xl text-amber-300 glow-text">$999</span>
           <span class="text-amber-200/50 text-xl font-cond">MXN</span>
           <span class="price-old text-xl font-cond ml-2">$3,000+ MXN</span>
         </div>
+      </div>
+      
+      <div class="tag mb-10" style="border-color:rgba(255,182,39,0.5); background:rgba(255,182,39,0.14);">
+        🎁 Regalo de hoy: +1 CURSO SECRETO extra — GRATIS
       </div>
       
       <div class="flex flex-col sm:flex-row gap-4">
@@ -309,8 +323,8 @@
           <div class="font-display text-2xl text-amber-300">INCLUIDO</div>
         </div>
         <div class="floating-badge bottom-12 -right-4 glass-card px-4 py-3 hidden sm:block" style="animation-delay:1.5s">
-          <div class="text-xs text-amber-200/60 uppercase tracking-wider">Plantillas</div>
-          <div class="font-display text-2xl text-amber-300">+12</div>
+          <div class="text-xs text-amber-200/60 uppercase tracking-wider">Curso secreto</div>
+          <div class="font-display text-2xl text-amber-300">🎁 GRATIS</div>
         </div>
         <div class="floating-badge -bottom-4 left-1/2 -translate-x-1/2 glass-card px-5 py-3" style="animation-delay:0.75s">
           <div class="flex items-center gap-2">
@@ -332,12 +346,14 @@
     <span>★ STOUTS & PORTERS</span>
     <span>★ CERVEZAS DE FRUTAS</span>
     <span>★ CONTROL DE CALIDAD</span>
+    <span>★ CURSO SECRETO DE REGALO</span>
     <span>★ FORMULACIÓN DESDE CERO</span>
     <span>★ IPA & NEIPA</span>
     <span>★ LAGERS & PILSNERS</span>
     <span>★ STOUTS & PORTERS</span>
     <span>★ CERVEZAS DE FRUTAS</span>
     <span>★ CONTROL DE CALIDAD</span>
+    <span>★ CURSO SECRETO DE REGALO</span>
   </div>
 </div>
 
@@ -349,10 +365,10 @@
       La oferta termina en
     </div>
     <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl mb-3 beer-text">
-      20 DE AGOSTO · 2026
+      31 DE AGOSTO · 2026
     </h2>
     <p class="text-amber-200/60 mb-10 font-cond tracking-wider uppercase text-sm">
-      Cierre de promoción · 11:00 PM (Hora local)
+      Cierre de promoción · 10:30 PM (Hora local)
     </p>
     
     <div id="countdown" class="grid grid-cols-4 gap-3 sm:gap-5 max-w-2xl mx-auto">
@@ -375,7 +391,7 @@
     </div>
     
     <p class="mt-8 text-amber-100/70 max-w-xl mx-auto">
-      Después de esta fecha, el curso regresa a su precio regular de <span class="text-amber-300 font-semibold">$3,000+ MXN</span>. Asegura tu lugar hoy y desbloquea el acceso completo a la plataforma.
+      Después de esta fecha, el curso regresa a su precio regular de <span class="text-amber-300 font-semibold">$3,000+ MXN</span> y pierdes el <span class="text-amber-300 font-semibold">curso secreto de regalo 🎁</span>. Asegura tu lugar hoy y desbloquea el acceso completo a la plataforma.
     </p>
   </div>
 </section>
@@ -429,6 +445,15 @@
             <div>
               <h4 class="font-semibold text-amber-100">Cervezas de Frutas y Control de Calidad</h4>
               <p class="text-amber-200/50 text-sm">Adjuntos, escalado y reproducibilidad.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2" stroke="#ffb627" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#ffb627" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-amber-100">🎁 Curso Secreto Extra — GRATIS</h4>
+              <p class="text-amber-200/50 text-sm">Bonus exclusivo por tiempo limitado. Se revela solo dentro de la plataforma.</p>
             </div>
           </li>
         </ul>
@@ -575,6 +600,15 @@
               <p class="text-amber-200/50 text-sm">Referencia completa de parámetros para cada estilo certificado.</p>
             </div>
           </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2" stroke="#ffb627" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#ffb627" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-amber-100">🎁 Curso secreto extra — GRATIS</h4>
+              <p class="text-amber-200/50 text-sm">Un curso sorpresa que solo se revela dentro de la plataforma. Exclusivo para quienes compran antes del cierre.</p>
+            </div>
+          </li>
         </ul>
       </div>
       
@@ -608,9 +642,13 @@
                 <span class="text-amber-200/70">Acceso de por vida</span>
                 <span class="text-amber-300">✓</span>
               </div>
-              <div class="flex justify-between py-2">
+              <div class="flex justify-between py-2 border-b border-amber-500/10">
                 <span class="text-amber-200/70">Soporte por WhatsApp</span>
                 <span class="text-amber-300">✓</span>
+              </div>
+              <div class="flex justify-between items-center py-3 px-3 -mx-3 rounded-lg" style="background:rgba(255,182,39,0.08); border:1px dashed rgba(255,182,39,0.45);">
+                <span class="text-amber-200 font-semibold">🎁 Curso secreto extra</span>
+                <span class="font-display text-amber-300 text-lg">GRATIS</span>
               </div>
             </div>
             
@@ -629,6 +667,50 @@
   </div>
 </section>
 
+<!-- SECRET COURSE BONUS -->
+<section id="curso-secreto" class="relative z-10 px-6 py-16">
+  <div class="max-w-4xl mx-auto reveal">
+    <div class="secret-card p-8 sm:p-12 text-center">
+      <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -right-24 w-72 h-72 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+      
+      <div class="relative">
+        <div class="tag mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+          Bonus exclusivo · Por tiempo limitado
+        </div>
+        
+        <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-700 flex items-center justify-center" style="box-shadow:0 14px 40px -8px rgba(255,182,39,0.6);">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="10" width="16" height="11" rx="2" stroke="#1a0a02" stroke-width="2"/>
+            <path d="M8 10V7a4 4 0 0 1 7.9-.7" stroke="#1a0a02" stroke-width="2"/>
+            <circle cx="12" cy="15.5" r="1.5" fill="#1a0a02"/>
+          </svg>
+        </div>
+        
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl beer-text mb-5 leading-tight">
+          +1 CURSO SECRETO<br/>DE REGALO
+        </h2>
+        
+        <p class="text-amber-100/75 max-w-2xl mx-auto text-lg mb-8 leading-relaxed">
+          Todos los que se inscriban <strong class="text-amber-300">antes del 31 de agosto</strong> reciben un <strong class="text-amber-300">curso secreto adicional</strong> que no aparece en el programa público. Su contenido se revela únicamente dentro de la plataforma, y desaparece cuando termina la promoción.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <span class="tag">🔒 Exclusivo para alumnos de hoy</span>
+          <span class="tag">🎁 Incluido sin costo</span>
+          <span class="tag">⏳ Solo hasta el 31 de agosto · 10:30 PM</span>
+        </div>
+        
+        <a href="#pago" class="btn-primary inline-flex items-center gap-2 px-8 py-4 text-lg">
+          DESBLOQUEAR EL CURSO SECRETO
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PAYMENT -->
 <section id="pago" class="relative z-10 px-6 py-20">
   <div class="max-w-5xl mx-auto">
@@ -636,7 +718,7 @@
       <div class="tag mb-4">Cómo pagar</div>
       <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl beer-text mb-4">3 FORMAS DE PAGO</h2>
       <p class="text-amber-100/70 max-w-2xl mx-auto text-lg">
-        Elige la opción que más te acomode. Tarjeta, transferencia o PayPal. Todos los métodos te dan acceso completo.
+        Elige la opción que más te acomode. Tarjeta, transferencia o PayPal. Todos los métodos te dan acceso completo <span class="text-amber-300 font-semibold">+ el curso secreto de regalo 🎁</span>.
       </p>
     </div>
     
@@ -726,7 +808,7 @@
             <li class="flex gap-3"><span class="font-display text-amber-300 text-xl">1.</span> Realiza el pago por cualquiera de los 3 métodos.</li>
             <li class="flex gap-3"><span class="font-display text-amber-300 text-xl">2.</span> Toma captura o foto del comprobante.</li>
             <li class="flex gap-3"><span class="font-display text-amber-300 text-xl">3.</span> Envía por WhatsApp: <span class="text-amber-300 font-semibold">comprobante + nombre completo + email.</span></li>
-            <li class="flex gap-3"><span class="font-display text-amber-300 text-xl">4.</span> Recibe tus accesos en el correo que indiques.</li>
+            <li class="flex gap-3"><span class="font-display text-amber-300 text-xl">4.</span> Recibe tus accesos en el correo que indiques <span class="text-amber-300 font-semibold">+ tu curso secreto 🎁</span>.</li>
           </ol>
         </div>
         <div class="md:col-span-2 text-center">
@@ -751,7 +833,7 @@
       FORMULA TU PRIMERA<br/>RECETA ESTA SEMANA
     </h2>
     <p class="text-amber-100/70 text-lg mb-8 max-w-xl mx-auto">
-      La promoción termina el 20 de agosto de 2026 a las 11:00 PM. Después, el precio regresa a su valor original.
+      La promoción termina el <strong class="text-amber-300">31 de agosto de 2026 a las 10:30 PM</strong>. Después, el precio regresa a su valor original y pierdes el <strong class="text-amber-300">curso secreto de regalo 🎁</strong>.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="#pago" class="btn-primary px-8 py-4 text-lg flex items-center justify-center gap-2">
@@ -781,7 +863,7 @@
     </div>
     <div class="text-sm text-amber-200/50 text-center sm:text-right">
       <div>Soporte: <a href="https://wa.me/524921344124" class="text-amber-300 hover:underline">492 134 4124</a></div>
-      <div class="text-xs mt-1">Promoción válida hasta el 20 de agosto de 2026 · 11:00 PM</div>
+      <div class="text-xs mt-1">Promoción válida hasta el 31 de agosto de 2026 · 10:30 PM</div>
     </div>
   </div>
 </footer>
@@ -792,7 +874,7 @@
 </a>
 
 <script>
-  const target = new Date('2026-08-20T23:00:00').getTime();
+  const target = new Date('2026-08-31T22:30:00').getTime();
   
   function updateCountdown(){
     const now = Date.now();
